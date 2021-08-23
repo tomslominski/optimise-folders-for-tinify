@@ -1,0 +1,15 @@
+{
+    "name": "tomslominski/optimise-folders-for-tinify",
+    "description": "Compress JPG and PNG images inside external folders using the Tinify API.",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Tom Slominski",
+            "email": "tom@slomin.ski"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    }
+}
