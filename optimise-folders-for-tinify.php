@@ -110,7 +110,7 @@ class OFT
 
 					switch ($this->can_run_plugin()) {
 						case 'plugin_missing':
-							$message = sprintf(__('The "Compress JPEG & PNG images" plugin is missing. Please <a href="%s">install it</a> first before using this plugin.', 'optimise-folders-for-tinify'), admin_url('plugin-install.php?s=Compress+JPEG+%26+PNG+images&tab=search&type=term'));
+							$message = sprintf(__('The "Compress JPEG & PNG images" plugin is missing. Please <a href="%s">install it</a> first before using this plugin.', 'optimise-folders-for-tinify'), admin_url('plugin-install.php?s=TinyPNG&tab=search&type=author'));
 							break;
 
 						case 'api_key_missing':
