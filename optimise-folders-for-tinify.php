@@ -193,15 +193,19 @@ class OFT
 		}
 
 		$images = $this->get_images_to_optimise();
+		$limit = apply_filters('oft\limit', 100);
 		$optimised = [];
+
+		if ($limit > 0) {
+			$images = array_slice($images, 0, $limit);
+		}
 
 		foreach ($images as $image) {
 			$file = self::path_join(WP_CONTENT_DIR, $image);
 
 			try {
-				// $source = \Tinify\fromFile($file);
-				// $source->toFile($file);
-				sleep(3);
+				$source = \Tinify\fromFile($file);
+				$source->toFile($file);
 				$optimised[] = $image;
 			} catch (\Tinify\AccountException $e) {
 				error_log('[Optimise Folders for Tinify] An API key error occurred while optimising: ' . $e->getMessage());
