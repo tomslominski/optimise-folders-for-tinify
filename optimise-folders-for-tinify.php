@@ -73,9 +73,7 @@ class OFT
 	 */
 	public function can_run_plugin()
 	{
-		global $tiny_plugin;
-
-		if (!isset($tiny_plugin) || !function_exists('\Tinify\fromFile')) {
+		if (!function_exists('\Tinify\fromFile')) {
 			return 'plugin_missing';
 		} elseif (!$this->get_api_key()) {
 			return 'api_key_missing';
